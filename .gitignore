@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ToDo.API/.vs
+/ToDo.API/ToDo.API/bin/Debug/netcoreapp2.2
+/ToDo.API/ToDo.API/obj
