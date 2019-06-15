@@ -25,6 +25,16 @@ namespace ToDo.API
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("SqLite"))); //SqLite Provider
             #endregion
+            #region Adding a CORS Policy
+            services.AddCors(options =>
+                    {
+                        options.AddPolicy("ToDoCors",
+                            builder =>
+                                builder.AllowAnyHeader()
+                                .AllowAnyMethod()
+                                .AllowAnyOrigin());
+                    });
+            #endregion
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             // Register the Swagger generator, defining 1 or more Swagger documents
@@ -52,6 +62,9 @@ namespace ToDo.API
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "ToDo API V1");
             });
 
+            #region Enabling CORS Policy
+            app.UseCors("ToDoCors");
+            #endregion
             app.UseMvc();
         }
     }
