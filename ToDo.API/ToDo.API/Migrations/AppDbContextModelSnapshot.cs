@@ -13,16 +13,19 @@ namespace ToDo.API.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.4-servicing-10062");
+                .HasAnnotation("ProductVersion", "3.0.0");
 
             modelBuilder.Entity("ToDo.API.Entities.ToDo", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
 
-                    b.Property<string>("Description");
+                    b.Property<string>("Description")
+                        .HasColumnType("TEXT");
 
-                    b.Property<string>("Status");
+                    b.Property<string>("Status")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 

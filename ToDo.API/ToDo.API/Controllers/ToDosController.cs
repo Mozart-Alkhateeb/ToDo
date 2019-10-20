@@ -22,8 +22,9 @@ namespace ToDo.API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Entities.ToDo>>> GetToDos()
         {
-            return await _context.ToDos.ToListAsync();
-        }
+
+                return await _context.ToDos.ToListAsync();
+            }
 
         // GET: api/ToDos/5
         [HttpGet("{id}")]

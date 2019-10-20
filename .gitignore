@@ -3,5 +3,5 @@
 ################################################################################
 
 /ToDo.API/.vs
-/ToDo.API/ToDo.API/bin/Debug/netcoreapp2.2
 /ToDo.API/ToDo.API/obj
+/ToDo.API/ToDo.API/bin

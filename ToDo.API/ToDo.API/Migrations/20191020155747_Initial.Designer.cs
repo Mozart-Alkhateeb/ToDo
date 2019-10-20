@@ -8,23 +8,26 @@ using ToDo.API.Data;
 namespace ToDo.API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20190613194732_Initial")]
+    [Migration("20191020155747_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.4-servicing-10062");
+                .HasAnnotation("ProductVersion", "3.0.0");
 
             modelBuilder.Entity("ToDo.API.Entities.ToDo", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
 
-                    b.Property<string>("Description");
+                    b.Property<string>("Description")
+                        .HasColumnType("TEXT");
 
-                    b.Property<string>("Status");
+                    b.Property<string>("Status")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
