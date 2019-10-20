@@ -18,3 +18,5 @@ In this post I will show you how we can integrate swagger to the API we built in
 Available end points Input Output
 
 https://mozartec.com/to-do-rest-api-using-asp-net-core-adding-swagger-part-2/
+
+https://github.com/Mozart-Alkhateeb/ToDo/tree/part-2
